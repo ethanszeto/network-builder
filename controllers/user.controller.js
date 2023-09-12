@@ -4,6 +4,6 @@ export default class UserController {
     static async getAllUsers(req, res) {
         const users = await UserAccessor.getAllUsers();
         console.log(users);
-        res.json({ users });
+        res.render("index", { users: users } );
     }
 }
